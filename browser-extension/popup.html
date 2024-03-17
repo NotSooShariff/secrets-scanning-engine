@@ -1,0 +1,73 @@
+<html>
+  <head>
+      <title>WatchDog</title>
+      <link href="styles/popup.css" rel="stylesheet" type="text/css">
+  </head>
+  <body style="width: 300px; background-color: #020409;">
+      <img src='icons/icon128.png' style="width: 128px; margin: auto; display: block;">
+      <div>
+          <h3>Generic Secrets</h3>
+          <label class="switch">
+              <input type="checkbox" id="generics">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div>
+          <h3>Specific Secrets</h3>
+          <label class="switch">
+              <input type="checkbox" id="specifics">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div>
+          <h3>AWS Keys</h3>
+          <label class="switch">
+              <input type="checkbox" id="aws">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div style="margin-bottom: 10px">
+          <h3>Check for .env files</h3>
+          <h5>(can trigger WAF bans)</h5>
+          <label class="switch">
+              <input type="checkbox" id="checkEnv">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div style="margin-bottom: 10px">
+          <h3>Check for .git dirs</h3>
+          <h5>(can trigger WAF bans)</h5>
+          <label class="switch">
+              <input type="checkbox" id="checkGit">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div style="margin-bottom: 10px">
+          <h3>Alerts</h3>
+          <label class="switch">
+              <input type="checkbox" id="alerts">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div>
+          <button class="accordion"><h3>Origin Deny List</h3></button>
+          <div class="panel">
+              Comma Seperated
+              <textarea style="width:100%" id="denyList"></textarea>
+          </div>
+      </div>
+       <div>
+          <button class="accordion"><h3>Findings</h3></button>
+          <div class="panel">
+              <button style="background-color: #16FF00; border: none; border-radius: 15px; color: black; margin: 10px; padding: 10px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px;" id="clearOriginFindings">Clear This Origin</button>
+              <button style="background-color: #16FF00; border: none; border-radius: 15px; color: black; margin: 10px; padding: 10px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px;" id="clearAllFindings">Clear All Origins</button>
+              <button style="background-color: #16FF00; border: none; border-radius: 15px; color: black; margin: 10px; padding: 10px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px;" id="downloadAllFindings">Download All Findings</button>
+              <h3>Findings for this origin</h3>
+              <ul style="color: white;" id="findingList">
+                
+              </ul>
+          </div>
+      </div>
+   <script src="popup.js"></script>
+  </body>
+</html>
