@@ -1,0 +1,2 @@
+gt:
+	@call gitpush.bat
