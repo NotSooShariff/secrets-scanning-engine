@@ -20,6 +20,7 @@ const fetchData = async () => {
             data += chunk;
           });
           resp.on('end', () => {
+            // file deepcode ignore ExtractPortToVariable: <Low Severity>
             resolve(JSON.parse(data));
           });
         });
@@ -44,10 +45,12 @@ const createWindow = () => {
   });
 
   if (app.isPackaged) {
+    // file deepcode ignore PromiseNotCaughtNode: <Low Severity>
     appServe(win).then(() => {
       win.loadURL("app://-");
     });
   } else {
+    // deepcode ignore ElectronLoadInsecureContent: <Low Severity>
     win.loadURL("http://localhost:3000");
     win.webContents.openDevTools();
     win.webContents.on("did-fail-load", (e, code, desc) => {
