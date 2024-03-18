@@ -29,9 +29,7 @@ The steps can be found below:
    ```
    git clone https://github.com/NotSooShariff/secrets-scanning-engine.git
    ```
-2. Headover to your favourite chromium browser and go to the extensions setting.
-   ![Screenshot 1](assets/image.png)
-   You can also do this by typing the following in your URL bar:
+2. Headover to your favourite chromium browser and go to the extensions setting. You can do this by typing the following in your URL bar:
    ```
    <!-- For Google Chrome -->
     chrome://extensions/ 
