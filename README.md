@@ -39,7 +39,9 @@ The steps can be found below:
     brave://extensions/ 
    ```
 3. Look for a toggle to enable `developer mode`
+   
    ![alt text](assets/image2.png)
+   
 4. You should now be able to load unpacked extensions from your system. 
 5. Click on the `load unpacked` option on the top left and select the `browser-extension` folder from within our repository that you just cloned and your extension will be added successfully under the name of **"Watchdog"**
 
