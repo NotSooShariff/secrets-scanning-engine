@@ -2,6 +2,8 @@
 
 The Secrets Scanning Engine is a robust tool developed to aid cybersecurity professionals and developers in identifying inadvertent leaks of sensitive information in their projects. Whether you're in the pre-deployment phase or need ongoing post-deployment security, this tool has you covered.
 
+> Note - You can find a powerpoint presentation [here](https://github.com/NotSooShariff/secrets-scanning-engine/blob/main/assets/Watchdog%20Project%20Presentation.pdf) if you're looking for more of just a high level overview
+
 ## Features
 
 - **Active Scanning**: A background script runs continuously to actively scan your local machine for any potential leaks of sensitive information pre-deployment.
