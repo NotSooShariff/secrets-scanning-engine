@@ -6,6 +6,34 @@ const appServe = app.isPackaged ? serve({
   directory: path.join(__dirname, "../out")
 }) : null;
 
+const fetchData = async () => {
+    const url = 'http://localhost:5000/reports';
+    try {
+      const response = await new Promise((resolve, reject) => {
+        const req = net.request(url);
+        req.on('response', (resp) => {
+          if (resp.statusCode !== 200) {
+            reject(new Error(`API request failed with status: ${resp.statusCode}`));
+          }
+          let data = '';
+          resp.on('data', (chunk) => {
+            data += chunk;
+          });
+          resp.on('end', () => {
+            resolve(JSON.parse(data));
+          });
+        });
+        req.on('error', (error) => {
+          reject(error);
+        });
+        req.end();
+      });
+      return response;
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+};
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -26,6 +54,10 @@ const createWindow = () => {
       win.webContents.reloadIgnoringCache();
     });
   }
+
+  fetchData().then((data) => {
+    win.webContents.send('api-data', data);
+  });
 }
 
 app.on("ready", () => {

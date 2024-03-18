@@ -1,7 +1,0 @@
-{
-    "fileName": "string",
-    "sensitiveFindings": "array",
-    "cvssScore": "number",
-    "epssScore": "number",
-    "combinedScore": "number"
-}

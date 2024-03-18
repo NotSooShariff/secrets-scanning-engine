@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    darkMode: 'class',
     reactStrictMode: true,
     output: "export",
     images: {
