@@ -18,6 +18,7 @@ const Accordion = () => {
     setActiveHeading(headingId === activeHeading ? null : headingId);
   };
   
+  // TODO: Replace Mock Data with Internal API
   const mockData = [
       {
           "fileName": "/Desktop/site/auth.js",
@@ -101,6 +102,7 @@ const Accordion = () => {
         }
     ];
     
+    // TODO: Switch back to API data after testing complete
     useEffect(() => {
   //     const handleApiData = (event, data) => {
         setData(mockData);
