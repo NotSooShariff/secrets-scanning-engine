@@ -11,7 +11,7 @@ fn main() {
     // Calculate the base score
     let base_score = calculate_base_score(AV, AC, PR, UI, C, I, A);
 
-    println!("CVSS Base Score: {:.1}", base_score);
+    println!("EPSS Base Score: {:.1}", base_score);
 }
 
 // Function to calculate the base score

@@ -134,13 +134,19 @@ fn combine_cvss_and_epss(cvss_score: f64, epss_score: f64) -> f64 {
 }
 
 fn main() {
-    let folder_path = "/home/kartik/Desktop/SSE";
+    let folder_path = "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts";
     let keywords_files = [
-        "/home/kartik/Desktop/criticality/critical.txt",
-        "/home/kartik/Desktop/criticality/high.txt",
-        "/home/kartik/Desktop/criticality/informational.txt",
-        "/home/kartik/Desktop/criticality/low.txt",
-        "/home/kartik/Desktop/criticality/medium.txt",
+        "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/critical.txt",
+        "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/high.txt",
+        "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/informational.txt",
+        "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/low.txt",
+        "C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/medium.txt",
+        
+        // "/home/kartik/Desktop/criticality/critical.txt",
+        // "/home/kartik/Desktop/criticality/high.txt",
+        // "/home/kartik/Desktop/criticality/informational.txt",
+        // "/home/kartik/Desktop/criticality/low.txt",
+        // "/home/kartik/Desktop/criticality/medium.txt",
     ];
 
     let keywords = match read_keywords_from_files(&keywords_files) {
@@ -160,11 +166,11 @@ fn main() {
 
     // Define weights for different keyword sources
     let mut keyword_weights = HashMap::new();
-    keyword_weights.insert("/home/kartik/Desktop/criticality/critical.txt", 2.0);
-    keyword_weights.insert("/home/kartik/Desktop/criticality/high.txt", 4.0);
-    keyword_weights.insert("/home/kartik/Desktop/criticality/medium.txt", 6.0);
-    keyword_weights.insert("/home/kartik/Desktop/criticality/low.txt", 8.0);
-    keyword_weights.insert("/home/kartik/Desktop/criticality/informational.txt", 10.0);
+    keyword_weights.insert("C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/critical.txt", 2.0);
+    keyword_weights.insert("C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/high.txt", 4.0);
+    keyword_weights.insert("C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/informational.txt", 6.0);
+    keyword_weights.insert("C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/low.txt", 8.0);
+    keyword_weights.insert("C:/Users/owais/Desktop/Projects/secrets-scanning-engine/scripts/criticality/medium.txt", 10.0);
 
     if let Err(e) = search_keywords_in_folder(
         folder_path,
