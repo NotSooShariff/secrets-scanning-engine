@@ -1,4 +1,8 @@
-# Watchdog: Secrets Scanning Engine
+<h1 align="center"> Watchdog: Secrets Scanning Engine </h1>
+
+<p align="center">
+  <img src="https://github.com/NotSooShariff/portfolio/blob/main/src/assets/watchdog_banner.png?raw=true" alt="Watchdog Logo">
+</p>
 
 The Secrets Scanning Engine is a robust tool developed to aid cybersecurity professionals and developers in identifying inadvertent leaks of sensitive information in their projects. Whether you're in the pre-deployment phase or need ongoing post-deployment security, this tool has you covered.
 
